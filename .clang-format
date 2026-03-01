@@ -1,0 +1,84 @@
+BasedOnStyle: Google
+Standard: c++20
+
+# ---------------------------------------------------------------------------
+# Indentation
+# ---------------------------------------------------------------------------
+IndentWidth: 4
+ContinuationIndentWidth: 4
+ConstructorInitializerIndentWidth: 4
+AccessModifierOffset: -4
+TabWidth: 4
+UseTab: Never
+
+# ---------------------------------------------------------------------------
+# Braces — K&R opening, but body is never collapsed onto one line
+# ---------------------------------------------------------------------------
+BreakBeforeBraces: Attach
+AllowShortBlocksOnASingleLine: Never
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortLambdasOnASingleLine: None
+AllowShortCaseLabelsOnASingleLine: false
+
+# ---------------------------------------------------------------------------
+# Function arguments / parameters — all on one line or one per line, no bin-packing
+# ---------------------------------------------------------------------------
+BinPackArguments: false
+BinPackParameters: false
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+
+# ---------------------------------------------------------------------------
+# Includes — grouped and sorted
+# ---------------------------------------------------------------------------
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+IncludeCategories:
+  # C system headers  <stdio.h> <stdlib.h> etc.
+  - Regex: "^<[a-z_]+\\.h>$"
+    Priority: 2
+    SortPriority: 2
+  # C++ standard library  <vector> <string> etc.
+  - Regex: "^<[a-z_/]+>$"
+    Priority: 3
+    SortPriority: 3
+  # Third-party headers  <raylib.h> <raymath.h> etc.
+  - Regex: "^<.+>$"
+    Priority: 4
+    SortPriority: 4
+  # Project headers  "foo.h" "bar/baz.h"
+  - Regex: "^\".*\"$"
+    Priority: 5
+    SortPriority: 5
+# The related header (matching .cpp) is always Priority 1 — clang-format
+# infers this automatically from the filename.
+
+# ---------------------------------------------------------------------------
+# Line length & wrapping
+# ---------------------------------------------------------------------------
+ColumnLimit: 100
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+
+# ---------------------------------------------------------------------------
+# Spaces
+# ---------------------------------------------------------------------------
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpaceAfterCStyleCast: false
+SpacesInAngles: Never
+SpacesInContainerLiterals: false
+Cpp11BracedListStyle: true
+
+# ---------------------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------------------
+PointerAlignment: Left
+ReferenceAlignment: Left
+SeparateDefinitionBlocks: Always
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1

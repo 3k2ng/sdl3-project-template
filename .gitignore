@@ -1,0 +1,156 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Build output directories
+# ─────────────────────────────────────────────────────────────────────────────
+build*/
+out/
+.cache/                         # clangd LSP cache
+.cache
+compile_commands.json
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CMake
+# ─────────────────────────────────────────────────────────────────────────────
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+cmake_uninstall.cmake
+CTestTestfile.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+install_manifest.txt
+_deps/                          # FetchContent downloads
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Compiled output
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Linux
+*.o
+*.a
+*.so
+*.so.*
+
+# Windows
+*.obj
+*.lib
+*.dll
+*.exe
+*.pdb
+*.ilk
+*.exp
+
+# macOS
+*.dylib
+*.dSYM/
+
+# Web (Emscripten)
+*.wasm
+*.js.mem
+*.data                          # --preload-file output
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Assets — packed archives are generated, never committed
+# ─────────────────────────────────────────────────────────────────────────────
+assets/data.zip
+assets/*.zip
+assets/*.7z
+assets/*.pak
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Android
+# ─────────────────────────────────────────────────────────────────────────────
+android/.gradle/
+android/local.properties
+android/build/
+android/app/build/
+android/app/release/
+android/app/debug/
+android/captures/
+android/.externalNativeBuild/
+android/app/.cxx/
+*.apk
+*.aab
+*.keystore
+*.jks
+*.ap_
+
+# ─────────────────────────────────────────────────────────────────────────────
+# macOS
+# ─────────────────────────────────────────────────────────────────────────────
+*.app/
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Windows
+# ─────────────────────────────────────────────────────────────────────────────
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ─────────────────────────────────────────────────────────────────────────────
+# IDEs and editors
+# ─────────────────────────────────────────────────────────────────────────────
+
+# VS / VS Code
+.vs/
+.vscode/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Vim / Neovim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Misc
+# ─────────────────────────────────────────────────────────────────────────────
+*.log
+*.bak
+*.tmp
+*.orig
+compile_commands.json
